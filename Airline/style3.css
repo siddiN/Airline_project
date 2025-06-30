@@ -27,14 +27,14 @@ h1{
 }
 
 @keyframes slider{
-	0%{background-image: url(pl_1.jpg);}
-	10%{background-image: url(pl_2.jpg);}
-	20%{background-image: url(pl_3.jpg);}
-	30%{background-image: url(pl_4.jpg);}
-	40%{background-image: url(hot_1.jpg);}
-	50%{background-image: url(hot_2.jpg);}
-	60%{background-image: url(hot_3.jpg);}
-	70%{background-image: url(hot_4.jpg);}
+	0%{background-image: url(plane1.jpg);}
+	10%{background-image: url(plane2.jpg);}
+	20%{background-image: url(pllane3.jpg);}
+	30%{background-image: url(plane4.jpg);}
+	40%{background-image: url(hotel1.jpg);}
+	50%{background-image: url(hotel2.jpg);}
+	60%{background-image: url(hotel3.jpg);}
+	70%{background-image: url(hotel4.jpg);}
 	80%{background-image: url(tax_2.jpg);}
 	90%{background-image: url(tax_4.jpg);}
 }
