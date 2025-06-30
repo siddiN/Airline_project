@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airplane Booking Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            background: url(air1.jpeg) no-repeat center center fixed;
+            background-size: cover;
+
+            padding-top: 50px;
+            
+            
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h3 {
+            margin-bottom: 20px;
+        }
+        .form-control, .form-check-input, .form-check-label {
+            margin-bottom: 15px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .footer-links {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1 class="text-center">Airplane Booking Form</h1>
+        <form action="insert.php" method="POST">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="customerName">Full Name:</label>
+                <input type="text" class="form-control" id="customerName" name="customerName" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="customerEmail">Email Address:</label>
+                <input type="email" class="form-control" id="customerEmail" name="customerEmail" placeholder="Enter your email address" required>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="form-group">
+                <label for="customerPhone">Contact Number:</label>
+                <input type="text" class="form-control" id="customerPhone" name="customerPhone" placeholder="Enter your contact number" required>
+            </div>
+
+            <!-- Departure Location -->
+            <div class="form-group">
+                <label for="departureLocation">Departure Location:</label>
+                <input type="text" class="form-control" id="departureLocation" name="departureLocation" placeholder="Enter departure location" required>
+            </div>
+
+            <!-- Arrival Location -->
+            <div class="form-group">
+                <label for="arrivalLocation">Arrival Location:</label>
+                <input type="text" class="form-control" id="arrivalLocation" name="arrivalLocation" placeholder="Enter arrival location" required>
+            </div>
+
+            <!-- Additional Options -->
+            <h3>Additional Options</h3>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="additionalOptions[]" value="10" id="extraBaggage">
+                <label class="form-check-label" for="extraBaggage">Extra Baggage ($10)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="additionalOptions[]" value="20" id="inFlightMeal">
+                <label class="form-check-label" for="inFlightMeal">In-Flight Meal ($20)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="additionalOptions[]" value="30" id="loungeAccess">
+                <label class="form-check-label" for="loungeAccess">Lounge Access ($30)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="additionalOptions[]" value="15" id="insurance">
+                <label class="form-check-label" for="insurance">Travel Insurance ($15)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="additionalOptions[]" value="25" id="seatSelection">
+                <label class="form-check-label" for="seatSelection">Seat Selection ($25)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="additionalOptions[]" value="40" id="priorityBoarding">
+                <label class="form-check-label" for="priorityBoarding">Priority Boarding ($40)</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="additionalOptions[]" value="50" id="extraLegroom">
+                <label class="form-check-label" for="extraLegroom">Extra Legroom ($50)</label>
+            </div>
+
+            <!-- Travel Class -->
+            <h3>Select Travel Class</h3>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="travelClass" value="50" id="economy" required>
+                <label class="form-check-label" for="economy">Economy Class ($50)</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="travelClass" value="100" id="business">
+                <label class="form-check-label" for="business">Business Class ($100)</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="travelClass" value="200" id="firstClass">
+                <label class="form-check-label" for="firstClass">First Class ($200)</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-custom btn-block mt-4">Submit Booking</button>
+        </form>
+    </div>
+
+    <!-- View Recent Bookings Link -->
+    <div class="footer-links text-center mt-4">
+       
+        <a href="read.php" class="btn btn-primary">View Recent Bookings</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
